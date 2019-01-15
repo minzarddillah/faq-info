@@ -1,0 +1,3 @@
+rootProject.name = 'boostInfo'
+
+include ':app'
