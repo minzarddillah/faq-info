@@ -1,24 +1,29 @@
 import React, { Component } from 'react';
 import { Text, View, Image, TouchableOpacity } from 'react-native';
+import { Icon } from 'native-base';
 import styles from './Header.style';
 
-export class Header extends Component {
-  state = {}
-  
-  render() {
-    return (
-      <View>
-        <TouchableOpacity>
-          <Icon name="md-menu" style={styles.iconLeftMenu} />
+
+function Header(props) {
+  return (
+    <View>
+      <View style={styles.iconLeftMenuContainer}>
+        <TouchableOpacity onPress={() => {
+          props.navigation.goBack();
+        }}>
+          <Icon name="md-arrow-back" style={styles.iconLeftMenu} />
         </TouchableOpacity>
-        <Image
-          source={require('../../img/bg_boostinfo.png')}
-          style={styles.headerImage}
-          resizeMode="cover"
-        />
+        <Text style={styles.title}>
+          BoostPreneur Quest{'\n'}Info
+        </Text>
       </View>
-    );
-  }
+      <Image
+        source={require('../../img/bg_boostinfo.png')}
+        style={styles.headerImage}
+        resizeMode="cover"
+      />
+    </View>
+  );
 }
 
 export default Header

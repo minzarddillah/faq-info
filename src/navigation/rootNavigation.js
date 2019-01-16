@@ -4,6 +4,7 @@ import {
 } from 'react-navigation';
 import QuestInfo from '../components/QuestInfo/QuestInfo.container'
 import Home from '../components/Home/Home.container';
+import RedeemVoucher from '../components/RedeemVoucher/RedeemVoucher.container';
 
 const HomeStack = createStackNavigator({
   Home: {
@@ -11,6 +12,9 @@ const HomeStack = createStackNavigator({
   },
   QuestInfo: {
     screen: QuestInfo
+  },
+  RedeemVoucher: {
+    screen: RedeemVoucher
   }
 })
 

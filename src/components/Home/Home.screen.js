@@ -1,11 +1,23 @@
 import React, { Component } from 'react'
-import { Text, View } from 'react-native'
+import { View, Text, Button } from 'react-native'
 
 export class Home extends Component {
   render() {
     return (
       <View>
-        <Text> Dari Home </Text>
+        <Button 
+          title="To Quest Info" 
+          onPress={() => {
+            this.props.navigation.navigate('QuestInfo')
+          }} 
+        />
+        <Button
+          title="To Electronic Voucher"
+          onPress={() => {
+            this.props.navigation.navigate('RedeemVoucher')
+          }}
+        />
+
       </View>
     )
   }
