@@ -5,6 +5,7 @@ import {
 import QuestInfo from '../components/QuestInfo/QuestInfo.container'
 import Home from '../components/Home/Home.container';
 import RedeemVoucher from '../components/RedeemVoucher/RedeemVoucher.container';
+import CheckoutRedeemVoucher from '../components/CheckoutRedeemVoucher/CheckoutRedeemVoucher.container';
 
 const HomeStack = createStackNavigator({
   Home: {
@@ -15,6 +16,9 @@ const HomeStack = createStackNavigator({
   },
   RedeemVoucher: {
     screen: RedeemVoucher
+  },
+  CheckoutRedeemVoucher: {
+    screen: CheckoutRedeemVoucher
   }
 })
 
